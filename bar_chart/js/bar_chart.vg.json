@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 250,
+  "title": {"text": "Top 5 chocolate taste"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate_taste_dataset.csv"
+  },
+  "transform": [{"filter": "datum.count_of_taste > 165"}],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "count_of_taste",
+      "type": "quantitative",
+      "title": "Number of taste",
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "y": {
+      "field": "taste",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null,
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "tooltip": {"field": "count_of_taste", "type": "quantitative"}
+  },
+  "config": {
+    "title": {"font": "sans-serif", "fontSize": 18},
+    "background": "#FFFFFF",
+    "axis": {
+      "labelColor": "#7B3F00",
+      "labelFont": "sans-serif",
+      "labelFontSize": 15
+    },
+    "view": {"stroke": null}
+  }
+}
