@@ -8,6 +8,7 @@
       "url": "https://raw.githubusercontent.com/atou0004/3179/main/choropleth_map/js/ne_110m.json",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
+      
     "layer":[
   
       {"data": {
@@ -50,8 +51,8 @@
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [2, 3, 4],
-            "range": ["#fdbb84","#fc8d59","#e34a33","#b30000"]
+            "domain": [1, 2, 3, 4],
+            "range": ["#eabf83", "#e1a360","#d18954","#bf643e", "#5c3317"]
           }
         },
         "tooltip": [
@@ -63,5 +64,6 @@
           ]
         } 
       }
-    ]
+    ],
+    "background": "white"
   } 
