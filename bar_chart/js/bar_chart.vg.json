@@ -5,6 +5,7 @@
    "title":{
       "text":"Top 5 chocolate taste"
    },
+   "description": "A bar chart that shows the top 5 chocolate taste",
    "data":{
       "url":"https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate_taste_dataset.csv"
    },
@@ -34,6 +35,7 @@
          "sort":"-x",
          "title":"Chocolate Taste",
          "axis":{
+            "labelColor":"#7B3F00",
             "domain":false,
             "grid":false,
             "ticks":false
@@ -69,7 +71,6 @@
       },
       "background":"#FFFFFF",
       "axis":{
-         "labelColor":"#7B3F00",
          "labelFont":"sans-serif",
          "labelFontSize":15
       },
