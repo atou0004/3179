@@ -145,5 +145,12 @@
          }
       }
    ],
-   "background":"white"
+
+   "config":{
+      "title":{
+         "font":"sans-serif",
+         "fontSize":18
+      },
+      "background":"#FFFFFF"
+   }
 }
