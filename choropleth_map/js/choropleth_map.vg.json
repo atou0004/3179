@@ -1,6 +1,6 @@
 {
    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-   "title":"Chocolate Bar in 2020",
+   "title":"Chocolate Bar Over Years (2006 - 2020)",
    "width":800,
    "height":500,
    "projection":{
