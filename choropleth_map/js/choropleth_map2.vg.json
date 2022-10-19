@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Cocoa Bean's Country Origin Over Years (2006 - 2020)",
+  "width": 800,
+  "height": 500,
+  "projection": {"type": "equalEarth", "rotate": [-375, 0, 0]},
+  "data": {
+    "url": "https://raw.githubusercontent.com/atou0004/3179/main/choropleth_map/js/ne_110m.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/atou0004/3179/main/choropleth_map/js/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "white"}
+    },
+    {
+      "transform": [
+        {
+          "calculate": "'No Cocoa Bean from ' + datum.properties.NAME",
+          "as": "nochocolate"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "#969696"},
+      "encoding": {
+        "tooltip": {"field": "nochocolate"},
+        "strokeOpacity": {
+          "condition": {"param": "continent_highlight", "value": 0.8},
+          "value": 0.2
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/country_of_bean_origin.csv"
+            },
+            "key": "country_of_bean_origin",
+            "fields": ["Count"]
+          }
+        }
+      ],
+      "params": [
+        {
+          "name": "continent_highlight",
+          "select": {"type": "point", "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "#cccccc", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "Count",
+          "title": "Count",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [25, 50, 75, 100, 125],
+            "range": ["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+          },
+          "legend": {"direction": "horizontal", "orient": "bottom"}
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "Count", "type": "quantitative", "title": "Count"}
+        ],
+        "opacity": {
+          "condition": {"param": "continent_highlight", "value": 1},
+          "value": 0.6
+        }
+      }
+    }
+  ],
+  "config": {
+    "title": {"font": "sans-serif", "fontSize": 18},
+    "background": "#C4A484"
+  },
+  "view": {"stroke": null}
+}
