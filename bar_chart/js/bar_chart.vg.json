@@ -1,51 +1,51 @@
 {
-   "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-   "width":600,
-   "height":300,
-   "title":{
-      "text":"Top 5 chocolate taste"
+   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   "width": 550,
+   "height": 300,
+   "title": {
+      "text": "Top 5 chocolate taste"
    },
    "description": "A bar chart that shows the top 5 chocolate taste",
-   "data":{
-      "url":"https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate_taste_dataset.csv"
+   "data": {
+      "url": "https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate_taste_dataset.csv"
    },
-   "transform":[
+   "transform": [
       {
-         "filter":"datum.count_of_taste > 165"
+         "filter": "datum.count_of_taste > 165"
       }
    ],
-   "mark":{
-      "type":"bar",
-      "cornerRadiusEnd":10
+   "mark": {
+      "type": "bar",
+      "cornerRadiusEnd": 10
    },
-   "encoding":{
-      "x":{
-         "field":"count_of_taste",
-         "type":"quantitative",
-         "title":"Number of taste",
-         "axis":{
-            "domain":false,
-            "grid":false,
-            "ticks":false
+   "encoding": {
+      "x": {
+         "field": "count_of_taste",
+         "type": "quantitative",
+         "title": "Number of taste",
+         "axis": {
+            "domain": false,
+            "grid": false,
+            "ticks": false
          }
       },
-      "y":{
-         "field":"taste",
-         "type":"nominal",
-         "sort":"-x",
-         "title":"Chocolate Taste",
-         "axis":{
-            "labelColor":"#7B3F00",
-            "domain":false,
-            "grid":false,
-            "ticks":false
+      "y": {
+         "field": "taste",
+         "type": "nominal",
+         "sort": "-x",
+         "title": "Chocolate Taste",
+         "axis": {
+            "labelColor": "#7B3F00",
+            "domain": false,
+            "grid": false,
+            "ticks": false
          }
       },
-      "color":{
-         "field":"taste",
-         "type":"nominal",
-         "scale":{
-            "range":[
+      "color": {
+         "field": "taste",
+         "type": "nominal",
+         "scale": {
+            "range": [
                "#a6cee3",
                "#1f78b4",
                "#a63603",
@@ -53,29 +53,29 @@
                "#33a02c"
             ]
          },
-         "legend":null
+         "legend": null
       },
-      "tooltip":[
+      "tooltip": [
          {
-            "field":"count_of_taste",
-            "type":"quantitative",
-            "title":"Number of taste",
-            "format":","
+            "field": "count_of_taste",
+            "type": "quantitative",
+            "title": "Number of taste",
+            "format": ","
          }
       ]
    },
-   "config":{
-      "title":{
-         "font":"sans-serif",
-         "fontSize":18
+   "config": {
+      "title": {
+         "font": "sans-serif",
+         "fontSize": 18
       },
-      "background":"#FFFFFF",
-      "axis":{
-         "labelFont":"sans-serif",
-         "labelFontSize":15
+      "background": "#C4A484",
+      "axis": {
+         "labelFont": "sans-serif",
+         "labelFontSize": 15
       },
-      "view":{
-         "stroke":null
+      "view": {
+         "stroke": null
       }
    }
 }
