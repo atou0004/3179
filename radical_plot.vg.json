@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple radial chart showing number of ingredients.",
+  "width": 350,
+  "height": 350,
+  "background": "#C4A484",
+  "title": {
+    "text": "Popularity for number of ingredients"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "counts_of_ingredients"
+      ]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 40,
+        "stroke": "#5C4033"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radiusOffset": 70,
+        "fontSize": 20
+      },
+      "encoding": {
+        "text": {
+          "field": "total",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "theta": {
+      "field": "total",
+      "type": "quantitative",
+      "stack": true
+    },
+    "radius": {
+      "field": "total",
+      "scale": {
+        "type": "sqrt",
+        "zero": true,
+        "rangeMin": 20
+      }
+    },
+    "color": {
+      "field": "counts_of_ingredients",
+      "type": "ordinal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "range": [
+          "#ffffd4",
+          "#fee391",
+          "#fec44f",
+          "#fe9929",
+          "#d95f0e",
+          "#993404"
+        ]
+      }
+    },
+    "tooltip": {
+      "field": "counts_of_ingredients"
+    }
+  },
+  "view": {
+    "stroke": null
+  },
+  "config": {
+    "title": {
+      "font": "sans-serif",
+      "fontSize": 18
+    },
+    "background": "#C4A484"
+  }
+}
