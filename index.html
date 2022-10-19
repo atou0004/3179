@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Chocolate</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
@@ -8,7 +9,8 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
   <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+    integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google font -->
@@ -19,104 +21,168 @@
 
 
 </head>
+
 <body>
 
- <div class="page">
+  <div class="page">
 
-   <!-- pure grid group -->
+    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Chocolate Visualisations</h1>
-        <p>Chocolate is one of the most popular candies in the world. Each year, residents of the United States collectively eat more than 2.8 billion pounds. However, not all chocolate bars are created equal! This dataset contains expert ratings of over 1,700 individual chocolate bars, along with information on their regional origin, percentage of cocoa, the variety of chocolate bean used, and where the beans were grown</p>
+        <h1>
+          <center>Chocolate Visualisations</center>
+        </h1>
+        <p style="color:#5A5A5A" align="center">
+          </style>The Visualisations are based on ratings were compiled by Brady Brelinski, Founding Member of the
+          Manhattan Chocolate Society</p>
       </div>
     </div>
-  <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>Chocolate Around The Whole</h2>
-            <p>The flavor is the most important component of the Flavors of Cacao ratings. Diversity, balance, intensity, and purity of flavors are all considered. A straight forward single note chocolate can rate as high as a complex flavor profile that changes throughout. Genetics, terroir, post-harvest techniques, processing, and storage can all be discussed when considering the flavor component.
-
-                Texture has a great impact on the overall experience and it is also possible for texture related issues to impact flavor. It is a good way to evaluate the makers' vision, attention to detail, and level of proficiency.
-                
-                Aftermelt is the experience after the chocolate has melted. Higher quality chocolate will linger and be long-lasting and enjoyable. Since the after melt is the last impression you get from the chocolate, it receives equal importance in the overall rating.</p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <div id="vis1" class="vis-container"></div>
-        </div>
-    </div>
+    <br>
+    <br>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-2-3">
-          <div id="vis2"  class="vis-container"></div>
+      <div class="pure-u-1-4">
+        <div class="description description-left">
+          <h2>
+            <center>Chocolate Around The Whole</center>
+          </h2>
+          <p>The flavor is the most important component of the Flavors of Cacao ratings. Diversity, balance, intensity,
+            and purity of flavors are all considered. A straight forward single note chocolate can rate as high as a
+            complex flavor profile that changes throughout. Genetics, terroir, post-harvest techniques, processing, and
+            storage can all be discussed when considering the flavor component.
+
+            Texture has a great impact on the overall experience and it is also possible for texture related issues to
+            impact flavor. It is a good way to evaluate the makers' vision, attention to detail, and level of
+            proficiency.
+
+            Aftermelt is the experience after the chocolate has melted. Higher quality chocolate will linger and be
+            long-lasting and enjoyable. Since the after melt is the last impression you get from the chocolate, it
+            receives equal importance in the overall rating.
+
+            <b>Chile</b> has the <b>
+              <highest /b> average rating
+          </p>
         </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>Chocolate Taste</h2>
-            <p>some description </p>
-          </div>
-        </div>
-      
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis1" class="vis-container"></div>
+      </div>
     </div>
+    <br>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>vis3 title</h2>
-            <p>some description</p>
-          </div>
+      <div class="pure-u-2-3">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>
+            <center>Chocolate Taste</center>
+          </h2>
+          <p>some description </p>
         </div>
-        <div class="pure-u-2-3">
-          <div id="vis3" class="vis-container"></div>
-        </div>
+      </div>
+
     </div>
+    <br>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-2-3">
-          <div id="vis4"  class="vis-container"></div>
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>
+            <center>Cocoa Percentage</center>
+          </h2>
+          <p>some description</p>
         </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>vis4 title</h2>
-            <p>some description </p>
-          </div>
-        </div>
-      
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis3" class="vis-container"></div>
+      </div>
     </div>
+    <br>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>
+            <center>Number of Ingredients</center>
+          </h2>
+          <p><b>3 number of ingredients</b> is the popular number of ingredients to make up chocolate.</p>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>
+          <center>Cocoa Origin</center>
+        </h2>
+        <p>
+          <center>some description</center></p>
+      </div>
+
+      <div class="pure-u-1-1">
+        <div id="vis5" class="vis-container"></div>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <h5>Visualisation created by Ansley Tou 30721598 </h5>
+      </div>
+    </div>
+
 
   </div> <!-- end page -->
-   
-<script type="text/javascript">
-  var specVis1 = "choropleth_map/js/choropleth_map.vg.json";
-  var specVis2= "bar_chart/js/bar_chart.vg.json";
-  var specVis3= "error_band/js/error_band.vg.json";
-  var specVis4= "bar_chart/js/bar_chart.vg.json";
 
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+  <script type="text/javascript">
+    var specVis1 = "choropleth_map/js/choropleth_map.vg.json";
+    var specVis2 = "bar_chart/js/bar_chart.vg.json";
+    var specVis3 = "error_band/js/error_band.vg.json";
+    var specVis4 = "radical_plot/js/radical_plot.vg.json";
+    var specVis5 = "choropleth_map/js/choropleth_map2.vg.json";
 
-  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
 </body>
+
 </html>
