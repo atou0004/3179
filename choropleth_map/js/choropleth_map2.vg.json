@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Cocoa Bean's Country Origin Over Years (2006 - 2020)",
-  "width": 800,
-  "height": 500,
+  "width":"container",
+  "height": 400,
   "projection": {"type": "equalEarth", "rotate": [-375, 0, 0]},
   "data": {
     "url": "https://raw.githubusercontent.com/atou0004/3179/main/choropleth_map/js/ne_110m.json",
@@ -68,8 +68,7 @@
             "type": "threshold",
             "domain": [25, 50, 75, 100, 125],
             "range": ["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-          },
-          "legend": {"direction": "horizontal", "orient": "bottom"}
+          }
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
@@ -83,7 +82,7 @@
     }
   ],
   "config": {
-    "title": {"font": "sans-serif", "fontSize": 18},
+    "title": {"font": "sans-serif", "fontSize": 19},
     "background": "#C4A484"
   },
   "view": {"stroke": null}
