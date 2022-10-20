@@ -1,7 +1,7 @@
 {
    "$schema":"https://vega.github.io/schema/vega-lite/v5.json",
-   "width":700,
-   "height":350,
+   "width":550,
+   "height":300,
    "title":{
       "text":"Pecentage of Cocoa Used Over Years (2006 - 2020)"
    },
@@ -67,7 +67,7 @@
    "config":{
       "title":{
          "font":"sans-serif",
-         "fontSize":18
+         "fontSize":19
       },
       "background":"#C4A484"
    },
