@@ -1,8 +1,8 @@
 {
    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-   "title": "Chocolate Bar Over Years (2006 - 2020)",
+   "title": "Dark Chocolate Bar Over Years (2006 - 2020)",
    "width": 800,
-   "height": 500,
+   "height": 400,
    "projection": {
       "type": "equalEarth",
       "rotate": [
@@ -152,7 +152,7 @@
    "config": {
       "title": {
          "font": "sans-serif",
-         "fontSize": 18
+         "fontSize": 19
       },
       "background": "#C4A484"
    },
