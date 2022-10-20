@@ -3,9 +3,9 @@
    "width": 550,
    "height": 300,
    "title": {
-      "text": "Top 5 chocolate taste"
+      "text": "Top 5 dark chocolate taste"
    },
-   "description": "A bar chart that shows the top 5 chocolate taste",
+   "description": "A bar chart that shows the top 5 dark chocolate taste",
    "data": {
       "url": "https://raw.githubusercontent.com/atou0004/3179/main/Assgn2/data/chocolate_taste_dataset.csv"
    },
@@ -67,7 +67,7 @@
    "config": {
       "title": {
          "font": "sans-serif",
-         "fontSize": 18
+         "fontSize": 19
       },
       "background": "#C4A484",
       "axis": {
