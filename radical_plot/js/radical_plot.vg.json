@@ -92,7 +92,7 @@
   "config": {
     "title": {
       "font": "sans-serif",
-      "fontSize": 18
+      "fontSize": 19
     },
     "background": "#C4A484"
   }
